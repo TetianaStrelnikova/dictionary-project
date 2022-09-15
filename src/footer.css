@@ -1,0 +1,26 @@
+.emaillink{
+    font-size: 15px;
+    text-align: center;
+    font-family: source-han-sans-simplified-c, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--artcles);
+transition: all 300ms ease;}
+.emaillink:hover{
+    color: var(--links);
+    transform: scale(1.5);}
+.standwithukraine{
+    font-size: 18px;
+    font-family: source-han-sans-simplified-c, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: var(--yellow);
+    line-height: 60px;}
+
+
+    .codedby{font-family: source-han-sans-simplified-c, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        color: var(--artcles);
+        text-align: center;
+        font-size: 15px;}
