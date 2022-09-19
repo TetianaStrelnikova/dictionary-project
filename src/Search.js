@@ -4,14 +4,15 @@ import './Search.css';
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
+import SearchResult from "./SearchResult"
 export default function Search() {
 
 
-
+  const[response, setResponse]= useState(null);
   const[word,setWord]=useState('');
 
   function handleResponse(response){
-    console.log(response.data[0]);
+   setResponse(response.data[0]);
   }
   
 
@@ -38,6 +39,7 @@ export default function Search() {
       <input type="search" autoFocus={true} placeholder = "Enter a word" onChange={Handle}></input>
      
      </form>
+     <SearchResult response={response}/>
     </div>
   );
 }
