@@ -11,10 +11,7 @@ export default function Footer(){
 <div className="email text-center ms-2 mt-1">
 <a  className="emaillink" href="mailto:strelnikova0108@gmail.com">strelnikova0108@gmail.com</a> 
 </div></div>
-<div className="d-flex justify-content-center">
-<p className="standwithukraine">Stand with <span className="ukraine me-3">Ukraine</span> </p>
-<div className="ukraineimage ms-2 "><img src="./images/ukraine.png" alt="Ukraine" className="img-fluid w-100"/></div>
-</div>
+
 </footer>
     )
 }
