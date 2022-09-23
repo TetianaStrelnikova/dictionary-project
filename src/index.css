@@ -76,14 +76,16 @@
   font-size: 25px;
 }
 ul{
-  list-style: none;
+ list-style: none;
+ padding: 0 !important;
 }
+li{margin: 15px;}
 .audio{
   font-size: 35px;
   
   border: solid 1px;
   border-radius: 50%;
-  margin: 10px;
+  margin-bottom: 10px;
   transition: ease all 300ms;
 }
 .audio:hover{
@@ -96,4 +98,8 @@ color: #9225ff;
 }
 .word{
   font-size: 50px;
+}
+strong{
+  color: rgb(58, 57, 57);
+  font-size: 16px;
 }
