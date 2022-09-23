@@ -12,7 +12,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <div className='container fontRegular backgroundDark'>
-    <Search />
+    <Search word="hello" />
     <Footer/>
     </div>
   </React.StrictMode>

@@ -5,32 +5,36 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
 import SearchResult from "./SearchResult";
 import {ReactComponent as SearchImage} from './images/SearchImage.svg';
-export default function Search() {
+export default function Search(props) {
 
 
   const[response, setResponse]= useState(null);
-  const[word,setWord]=useState('');
+  const[word,setWord]=useState(props.word);
+  const[loaded, setLoaded]= useState(false);
 
   function handleResponse(response){
    setResponse(response.data[0]);
   }
-  
-
-  function SearchWord(event){
-    event.preventDefault();
+  function Searchapi(){
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     axios.get(apiUrl).then(handleResponse);
     
-  
+  }
+
+  function SearchWord(event){
+    event.preventDefault();
+    Searchapi();
   }
   function Handle(event){
     event.preventDefault();
     setWord(event.target.value);
   }
+function load(){
+  setLoaded(true);
+  Searchapi();
+}
 
-
- 
-
+ if(loaded){
   return (
     <div>
     <div className='d-flex justify-content-center backgroundLight ms-5 me-5'>
@@ -46,7 +50,11 @@ export default function Search() {
      </div>
      <SearchResult response={response}/>
      </div>
-  );
+  );}
+  else{
+load()
+return("Loading..")
+  }
 }
 
 
