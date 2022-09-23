@@ -16,15 +16,22 @@ export default function Search(props) {
    setResponse(response.data[0]);
   }
   function handlepexelsresponse(response){
-    console.log(response);
+    console.log(response.data);
+  }
+  function pexelsearch(){
+    let pexelsapikey  = "563492ad6f917000010000015342e1d8b94e4cadb687acfadbf1899f";
+    let pexelsurl = `https://api.pexels.com/v1/search?query=${word}&per_page=3`;
+    axios
+    .get(pexelsurl, {
+      headers: { authorization: `Bearer ${pexelsapikey}` },
+    })
+    .then(handlepexelsresponse);
   }
   function Searchapi(){
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
     axios.get(apiUrl).then(handleResponse);
-    let pexelsapikey  = "563492ad6f917000010000015342e1d8b94e4cadb687acfadbf1899f";
-    let pexelsurl = `https://api.pexels.com/v1/search?query=${word}`;
-    let headers = {"Authorization": `Bearer ${pexelsapikey}`}
-    axios.get(pexelsurl, { headers:{headers}}).then(handlepexelsresponse)
+    pexelsearch();
+    
   }
 
   function SearchWord(event){
