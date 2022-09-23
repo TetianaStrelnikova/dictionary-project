@@ -43,7 +43,7 @@ function load(){
      <h1 className='mt-5 maintextcolor fontBold'>Dictionary</h1>
      <h3 className='mt-5 mb-5 ms-0 me-0  quastion'>What word do you want to look up?</h3>
      <form className='pt-3' onSubmit={SearchWord}> 
-      <input type="search" autoFocus={true} placeholder = "Enter a word" onChange={Handle}></input>
+      <input type="search" autoFocus={true} placeholder = "Enter a word" defaultValue={props.word} onChange={Handle}></input>
        <button className="ms-3 button" type="submit">Search</button>
      </form></section></div>
      <SearchImage className='searchimage image-fluid mt-2 mb-2'/>
