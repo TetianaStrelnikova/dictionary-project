@@ -7,7 +7,7 @@ export default function SearchResult(props) {
 if(props.response){
     return(
     <div className='backgroundLight m-5 p-5'>
-    <h1 className='text-center pt-5 maintextcolor word'>"{props.response.word}"</h1>
+    <h1 className='text-center mb-0 maintextcolor word'>"{props.response.word}"</h1>
     {props.response.phonetics.map(function(phonetic,index){return(<div key={index}><Phonetics phonetic={phonetic}/></div>);})}
     {props.response.meanings.map(function(meaning,index){return <div key={index}><Meaning meaning={meaning}/></div>})}
      </div>   

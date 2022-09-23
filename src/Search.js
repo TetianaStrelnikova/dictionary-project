@@ -51,8 +51,8 @@ function load(){
 
  if(loaded){
   return (
-    <div>
-    <div className='d-flex justify-content-center backgroundLight ms-5 me-5'>
+    <div >
+    <div className='main d-flex justify-content-center backgroundLight mt-3 ms-5 me-5'>
     <div className='pt-1 text-center '>
       <section className=' ps-5 pe-5'>
      <h1 className='mt-5 maintextcolor fontBold'>Dictionary</h1>
@@ -61,7 +61,7 @@ function load(){
       <input type="search" autoFocus={true} placeholder = "Enter a word" defaultValue={props.word} onChange={Handle}></input>
        <button className="ms-3 button" type="submit">Search</button>
      </form></section></div>
-     <SearchImage className='searchimage image-fluid mt-2 mb-2'/>
+     <SearchImage className='searchimage image-fluid '/>
      </div>
      <SearchResult response={response}/>
      <Photos photos={photos}/>

@@ -81,7 +81,7 @@ ul{
 }
 li{margin: 15px;}
 .audio{
-  font-size: 35px;
+  font-size: 20px;
   
   border: solid 1px;
   border-radius: 50%;
@@ -93,11 +93,11 @@ transform: scale(1.3);
 color: #9225ff;
 }
 .phonetics{
-  font-size: 30px;
+  font-size: 20px;
  
 }
 .word{
-  font-size: 50px;
+  font-size: 30px;
 }
 strong{
   color: rgb(58, 57, 57);
@@ -113,3 +113,49 @@ strong{
 .photo:hover{
   transform: scale(2.0);
 }
+.contactImage{
+  max-width: 200px;
+  height: auto;
+}
+.i{
+  opacity: 0.8;
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 50%;
+  border: solid 1px;
+  color :#7D06F3;
+  box-shadow:rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  
+  transition: all 500ms ease;
+  
+}
+.i:hover{
+  transform: scale(1.2);
+  opacity: 1;
+}
+.contacticons{ position:sticky;
+
+  top:20px;}
+.icons{ 
+  max-width: 50px;
+ 
+  position: relative;
+
+ }
+ .icon1{
+  position: absolute;
+  top:0;
+ }.icon2{
+  position: absolute;
+  top:50px;
+ }.icon3{
+  position: absolute;
+  top:100px;
+ }
+ .icon4{
+  position: absolute;
+  top:150px;}
+
+  .main{
+    max-height: 400px;
+  }
