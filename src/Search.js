@@ -1,26 +1,28 @@
 
-
+import React from 'react';
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
 import SearchResult from "./SearchResult";
 import {ReactComponent as SearchImage} from './images/SearchImage.svg';
+import Photos from './Photos';
 export default function Search(props) {
 
 
   const[response, setResponse]= useState(null);
   const[word,setWord]=useState(props.word);
   const[loaded, setLoaded]= useState(false);
+  const [photos, setPhotos]= useState(null);
 
   function handleResponse(response){
    setResponse(response.data[0]);
   }
   function handlepexelsresponse(response){
-    console.log(response.data);
+   setPhotos(response.data.photos);
   }
   function pexelsearch(){
     let pexelsapikey  = "563492ad6f917000010000015342e1d8b94e4cadb687acfadbf1899f";
-    let pexelsurl = `https://api.pexels.com/v1/search?query=${word}&per_page=3`;
+    let pexelsurl = `https://api.pexels.com/v1/search?query=${word}&per_page=9`;
     axios
     .get(pexelsurl, {
       headers: { authorization: `Bearer ${pexelsapikey}` },
@@ -62,6 +64,7 @@ function load(){
      <SearchImage className='searchimage image-fluid mt-2 mb-2'/>
      </div>
      <SearchResult response={response}/>
+     <Photos photos={photos}/>
      </div>
   );}
   else{

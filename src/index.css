@@ -103,3 +103,13 @@ strong{
   color: rgb(58, 57, 57);
   font-size: 16px;
 }
+.photo{
+
+  border-radius: 5px;
+  border:  white 5px solid;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all ease 500ms;
+}
+.photo:hover{
+  transform: scale(2.0);
+}
