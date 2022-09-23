@@ -1,10 +1,10 @@
 
 
-import './Search.css';
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
-import SearchResult from "./SearchResult"
+import SearchResult from "./SearchResult";
+import {ReactComponent as SearchImage} from './images/SearchImage.svg';
 export default function Search() {
 
 
@@ -32,15 +32,20 @@ export default function Search() {
  
 
   return (
-    <div >
-     <h1>Dictionary</h1>
-     <h2>What word do you want to look up?</h2>
-     <form onSubmit={SearchWord}> 
+    <div>
+    <div className='d-flex justify-content-center backgroundLight ms-5 me-5'>
+    <div className='pt-1 text-center '>
+      <section className=' ps-5 pe-5'>
+     <h1 className='mt-5 maintextcolor fontBold'>Dictionary</h1>
+     <h3 className='mt-5 mb-5 ms-0 me-0  quastion'>What word do you want to look up?</h3>
+     <form className='pt-3' onSubmit={SearchWord}> 
       <input type="search" autoFocus={true} placeholder = "Enter a word" onChange={Handle}></input>
-     
-     </form>
+       <button className="ms-3 button" type="submit">Search</button>
+     </form></section></div>
+     <SearchImage className='searchimage image-fluid mt-2 mb-2'/>
+     </div>
      <SearchResult response={response}/>
-    </div>
+     </div>
   );
 }
 

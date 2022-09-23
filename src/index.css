@@ -1,13 +1,88 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+@font-face {
+  font-family:"Graphik Thin Italic";
+  src: local("Graphik Thin Italic"),
+   url("./fonts/GraphikThinItalic.otf") format("truetype");
+ 
+  }
+  @font-face {
+    font-family:"Graphik Bold Italic";
+    src: local("Graphik Bold Italic"),
+     url("./fonts/GraphikBoldItalic.otf") format("truetype");
+    
+    }
+  @font-face {
+    font-family:"Graphik Regular";
+    src: local("Graphik Regular"),
+     url("./fonts/GraphikRegular.otf") format("truetype");
+    
+    }
+    @font-face {
+      font-family:"Graphik Bold";
+      src: local("Graphik Bold"),
+       url("./fonts/GraphikBold.otf") format("truetype");
+      }
+  .fontBold{
+    font-family: "Grafik Bold";
+    font-weight: 600;
+    font-size: 40px;
+  }
+  .fontRegular{font-family:"Graphik Regular";}
+  .fontItalicBold {
+    font-family: "Graphik Bold Italic";
+   }
+  .fontThinItalic{font-family:"Graphik Thin Italic";
+
+  }
+  .backgroundLight{
+    background-color: #F8F9FB;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 7px;
+  }
+  .backgroundDark{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color:#F3F4F6;
+    border-radius: 7px;
+  }
+  .footer{
+    color: #A9ABAD;
+
+  }
+  .footer a{
+    color:#7D06F3
+  }
+
+.searchimage{
+ max-width: 400px;
+  width:cover;
+  height: cover;
+}
+.maintextcolor{
+  color: #7D06F3;
+}
+.link{ color: #b770ff;}
+.colorexample{color:#7949a8;}
+.button{
+  background-color:  #F8F9FB;
+  border: none;
+  color : #7D06F3;
+  font-size: 18px;
+}
+.quastion{
+  font-size: 25px;
+}
+ul{
+  list-style: none;
+}
+.audio{
+  font-size: 35px;
+  
+  border: solid 1px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.phonetics{
+  font-size: 30px;
+  color: #2f2539;
 }

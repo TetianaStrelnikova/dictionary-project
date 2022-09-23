@@ -5,10 +5,13 @@ import Search from './Search';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from "./Footer";
+import "./fonts/GraphikBoldItalic.otf";
+import "./fonts/GraphikBlack.otf";
+import "./fonts/GraphikThinItalic.otf";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div className='container'>
+    <div className='container fontRegular backgroundDark'>
     <Search />
     <Footer/>
     </div>
